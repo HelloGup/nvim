@@ -2,7 +2,9 @@ lua require("init")
 
 "跳出括号
 function! SkipPair() 
-    if getline('.')[col('.') - 1] == ')' || getline('.')[col('.') - 1] == ']' || getline('.')[col('.') - 1] == '"' || getline('.')[col('.') - 1] == "'" || getline('.')[col('.') - 1] == '}' || getline('.')[col('.') - 1] == ',' || getline('.')[col('.') - 1] == '.' || getline('.')[col('.') - 1] == ';' || getline('.')[col('.') - 1] == '?' || getline('.')[col('.') - 1] == '<' || getline('.')[col('.') - 1] == '>' || getline('.')[col('.') - 1] == '`' || getline('.')[col('.') - 1] == '('
+    let char = getline('.')[col('.') - 1]
+
+    if char == ')' || char == ']' || char == '"' || char == "'" || char == '}' || char == ',' || char == '.' || char == ';' || char == '?' || char == '<' || char == '>' || char == '('
         return "\<ESC>la"
     else
         return "\t"
@@ -24,11 +26,49 @@ function! ZoomToggle() abort
 endfunction
 nnoremap <silent><Leader>z :call ZoomToggle()<CR>
 
-" 自定义符号自动包裹
-function! s:surround()
+" 自定义符号自动包裹单词
+function! s:surroundword()
     let word = expand("<cword>")
     let wrap=input("wrap with: ")
     let command = "s/".word."/".wrap.word.wrap."/"
     execute command
     endfunction
-nnoremap <silent>cx :call <SID>surround()<CR>
+nnoremap <silent>cx :call <SID>surroundword()<CR>
+
+" 自定义符号自动包裹字符串
+function! s:surround()
+    let word = expand("<cWORD>")
+    let wrap=input("wrap with: ")
+    let command = "s/".word."/".wrap.word.wrap."/"
+    execute command
+endfunction
+nnoremap <silent><leader>cx :call <SID>surround()<CR>
+
+" 自动转换bool
+" function! Switchbool()
+"     let word = expand("<cword>")
+"     let str = ""
+"     let pos = getpos('.')
+"
+"     if word ==# "true"
+"         let str = "false"
+"     elseif word ==# "True"
+"         let str = "False"
+"     elseif word ==# "TRUE"
+"         let str = "FALSE"
+"     elseif word ==# "false"
+"         let str = "true"
+"     elseif word ==# "False"
+"         let str = "True"
+"     elseif word ==# "FALSE"
+"         let str = "TRUE"
+"     endif
+"
+"     let command = "s/".word."/".str."/"
+"     execute command
+"     call setpos('.', pos)
+" endfunction
+" nnoremap <silent><leader>= :call Switchbool()<CR>
+
+
+

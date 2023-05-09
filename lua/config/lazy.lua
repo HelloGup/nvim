@@ -17,6 +17,9 @@ require("lazy").setup({
     -- { import = "lazyvim.plugins.extras.dap.core" },
     -- { import = "lazyvim.plugins.extras.dap.nlua" },
 
+    -- markdown preview
+    { import = "lazyvim.plugins.extras.markdown.markdown-preview" },
+
 		-- import/override with your plugins
 		-- { import = "plugins" },
 	},
