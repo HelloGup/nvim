@@ -5,5 +5,6 @@ local opt = vim.opt
 -- opt.whichwrap:append "<>[]hl"
 
 --持久性撤销文件保存目录，目录自动创建
+-- 生成的文件名带有绝对路径并使用%替换/,防止重命名
 opt.undodir = vim.fn.expand "~/.cache/nvim/undo"
 

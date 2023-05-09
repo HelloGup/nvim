@@ -4,7 +4,7 @@ require("config.lazy")
 -- 主题
 -- tokyonight
 -- tokyonight,tokyonight-night,tokyonight-day,tokyonight-moon,tokyonight-storm
--- vim.cmd([[colorscheme tokyonight-moon]])
+vim.cmd([[colorscheme tokyonight-moon]])
 
 -- nightfox
 -- nightfox,nordfox,terafox,dawnfox,dayfox,carbonfox,duskfox,
@@ -21,5 +21,5 @@ require("config.lazy")
 
 -- onedark
 -- Choose in /LazyVim.../colorscheme.lua
-vim.cmd([[colorscheme onedark]])
+-- vim.cmd([[colorscheme onedark]])
 

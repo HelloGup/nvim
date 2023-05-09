@@ -2,7 +2,7 @@ lua require("init")
 
 "跳出括号
 function! SkipPair() 
-    if getline('.')[col('.') - 1] == ')' || getline('.')[col('.') - 1] == ']' || getline('.')[col('.') - 1] == '"' || getline('.')[col('.') - 1] == "'" || getline('.')[col('.') - 1] == '}' || getline('.')[col('.') - 1] == ',' || getline('.')[col('.') - 1] == '.' || getline('.')[col('.') - 1] == ';' || getline('.')[col('.') - 1] == '?' || getline('.')[col('.') - 1] == '<' || getline('.')[col('.') - 1] == '>'
+    if getline('.')[col('.') - 1] == ')' || getline('.')[col('.') - 1] == ']' || getline('.')[col('.') - 1] == '"' || getline('.')[col('.') - 1] == "'" || getline('.')[col('.') - 1] == '}' || getline('.')[col('.') - 1] == ',' || getline('.')[col('.') - 1] == '.' || getline('.')[col('.') - 1] == ';' || getline('.')[col('.') - 1] == '?' || getline('.')[col('.') - 1] == '<' || getline('.')[col('.') - 1] == '>' || getline('.')[col('.') - 1] == '`' || getline('.')[col('.') - 1] == '('
         return "\<ESC>la"
     else
         return "\t"
