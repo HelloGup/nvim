@@ -14,8 +14,7 @@ require("lazy").setup({
 
 		-- import any extras modules here
 		-- { import = "helloguvim.plugins.extras.lang.json" },
-    -- { import = "helloguvim.plugins.extras.dap.core" },
-    -- { import = "helloguvim.plugins.extras.dap.nlua" },
+    { import = "helloguvim.plugins.extras.dap.core" },
 
     -- markdown preview
     { import = "helloguvim.plugins.extras.markdown.markdown-preview" },
