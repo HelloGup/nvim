@@ -1,4 +1,4 @@
--- bootstrap lazy.nvim, LazyVim and your plugins
+-- bootstrap lazy.nvim, HelloGuVim and your plugins
 require("config.lazy")
 
 -- 主题
@@ -20,6 +20,6 @@ vim.cmd([[colorscheme tokyonight-moon]])
 -- vim.cmd([[colorscheme gruvbox]])
 
 -- onedark
--- Choose in /LazyVim.../colorscheme.lua
+-- Choose in /HelloGuVim.../colorscheme.lua
 -- vim.cmd([[colorscheme onedark]])
 
