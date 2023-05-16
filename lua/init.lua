@@ -2,9 +2,14 @@
 require("config.lazy")
 
 -- 主题
+
+-- 初始主题 habamax
+-- vim.cmd([[colorscheme habamax]])
+
 -- tokyonight
 -- tokyonight,tokyonight-night,tokyonight-day,tokyonight-moon,tokyonight-storm
-vim.cmd([[colorscheme tokyonight-moon]])
+-- vim.cmd([[colorscheme tokyonight-moon]])
+
 
 -- nightfox
 -- nightfox,nordfox,terafox,dawnfox,dayfox,carbonfox,duskfox,
@@ -17,7 +22,7 @@ vim.cmd([[colorscheme tokyonight-moon]])
 -- gruvbox
 -- background can set "dark" or "light"
 -- vim.o.background = "dark"
--- vim.cmd([[colorscheme gruvbox]])
+vim.cmd([[colorscheme gruvbox]])
 
 -- onedark
 -- Choose in /HelloGuVim.../colorscheme.lua

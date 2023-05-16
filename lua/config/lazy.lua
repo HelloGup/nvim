@@ -8,6 +8,10 @@ end
 vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
 
 require("lazy").setup({
+  -- 禁止通知检测到配置更改
+  change_detection = {
+		notify = false,
+	},
 	spec = {
 		-- add HelloGuVim and import its plugins
 		{ "HelloGup/HelloGuVim", import = "helloguvim.plugins" },
