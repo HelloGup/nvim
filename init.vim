@@ -70,5 +70,3 @@ nnoremap <silent><leader>cx :call <SID>surround()<CR>
 " endfunction
 " nnoremap <silent><leader>= :call Switchbool()<CR>
 
-
-
